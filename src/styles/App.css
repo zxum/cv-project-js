@@ -1,0 +1,9 @@
+.main-body {
+    width: 533px;
+    height: 710px;
+    background-color: #f0f5f9;
+    color: #313C46;
+    box-shadow: 0 0 15px #C9D6DF;
+    margin-top: 10%;
+    display: flex;
+}
