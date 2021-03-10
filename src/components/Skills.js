@@ -64,7 +64,7 @@ class Skills extends React.Component {
               {skillList}
             </ul>
             <form onSubmit={this.addSkill}> 
-              <input type="text" />
+              <input type="text" className="small-input" />
             </form>
           </div>
         )

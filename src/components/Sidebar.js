@@ -17,7 +17,7 @@ function Sidebar() {
       </div>
       
       <SidebarSectionHeader text="Personal Info"/> 
-      <div className="padded small-text">
+      <div className="padded-lr small-text">
         <p className="label">Phone</p>
         <EditableP value="(123) 340-1234" />
         <p className="label">Email</p>
@@ -28,13 +28,13 @@ function Sidebar() {
       
 
       <SidebarSectionHeader text="Skills"/>
-      <div className="padded">
+      <div className="padded-lr">
         <Skills /> 
         
       </div>
       
       <SidebarSectionHeader text="Languages"/>
-      <div className="padded">
+      <div className="padded-lr">
         <Languages />
       </div>
 

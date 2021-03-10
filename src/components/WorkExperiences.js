@@ -1,13 +1,64 @@
 import React, { Component } from 'react'
 
 export class WorkExperiences extends Component {
+
+  constructor() {
+    super() 
+    this.state = {
+      showAddBtn: true
+      workexps: [],
+      work: {
+        id:uniqid(),
+        from: '',
+        to: '',
+        company: '',
+        location: '',
+        position: '',
+        description: ''
+      }
+    }
+    this.toggleAddBtn = this.toggleAddBtn.bind(this)
+    this.handleCancel = this.handleCancel.bind(this)
+    this.handleDone = this.handleCancel.bind(this)
+  }
+
+  toggleAddBtn() {
+    this.setState({
+      showAddBtn: !this.state.showAddBtn
+    })
+  }
+
+  handleDone() {
+    
+  }
+
+  handleCancel(event) {
+    let form = event.target.parentNode.parentNode
+    console.log(form)
+    
+
+    this.toggleAddBtn()
+  }
+
+  save() {
+
+  }
+
+
   render() {
-    return (
+    if (this.state.showAddBtn) {
+      return (
+        <div className="work-block">
+          <i className="fas fa-plus-circle" id="add-btn" onClick={this.toggleAddBtn}></i>
+        </div>
+      )
+    } else {
+      return (
       <div className="work-block">
         <form className="work-input">
           <div className="flex-wrapper right-side">
-            <i className="fas fa-check-circle btn" id="done-btn"></i>
-            <i className="fas fa-times-circle btn" id="delete-btn"></i>
+            <i className="fas fa-check-circle btn" id="done-btn" onClick={this.handleSubmit}></i>
+            <i className="fas fa-times-circle btn" id="delete-btn" onClick={this.handleCancel}></i>
           </div>
 
           <div className="flex-wrapper">
@@ -37,10 +88,9 @@ export class WorkExperiences extends Component {
           </label>
 
         </form>
-        
-        <i className="fas fa-plus-circle" id="add-btn"></i>
       </div>
-    )
+      )
+    }
   }
 }
 

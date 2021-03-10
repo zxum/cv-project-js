@@ -58,6 +58,10 @@ body {
     padding: 1.5rem 1rem;
 }
 
+.padded-lr {
+    padding: 0.5rem 1rem;
+}
+
 .small-text {
     font-size: 10pt;
 }
@@ -88,16 +92,17 @@ input[type="text"] {
     width: 100%;
 }
 
-li {
-    list-style: none;
-    font-size: 9pt;
+.small-input {
+    font-size: 10pt;
+    padding: 0;
 }
 
 .skill-item {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 0.5rem;
+    font-size: 10pt;
+    margin-bottom: 0.15rem;
 }
 
 form.work-input label {
