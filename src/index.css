@@ -120,6 +120,7 @@ form.work-input textarea {
     width: 100%;
     border-radius: 5px;
     border: 1px solid #ccc;
+    font-size: 8pt;
 }
 
 .flex-wrapper {
@@ -129,4 +130,21 @@ form.work-input textarea {
 
 .right-side {
     justify-content: flex-end;
+}
+
+.work-info {
+    font-size: 10px;
+}
+
+.work-info:not(:first-child) {
+    margin-top: 0.5rem;
+}
+
+.dates {
+    width: 10%;
+}
+
+.italic {
+    font-style: italic;
+    margin-bottom: 0.25rem;
 }
