@@ -19,7 +19,9 @@ body {
     align-items: center;
 }
 
-#add-btn {
+#add-btn,
+#delete-btn,
+#done-btn {
     cursor: pointer;
 }
 
@@ -98,6 +100,28 @@ li {
     margin-bottom: 0.5rem;
 }
 
-#delete-btn {
-    cursor: pointer;
+form.work-input label {
+    font-size: 9pt;
+}
+
+form.work-input input {
+    padding: 0;
+    line-height: 8pt;
+    font-size: 8pt;
+    width: 100%;
+}
+
+form.work-input textarea {
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.flex-wrapper {
+    display: flex;
+    gap: 10px;
+}
+
+.right-side {
+    justify-content: flex-end;
 }

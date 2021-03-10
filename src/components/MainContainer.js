@@ -1,6 +1,7 @@
 import React from 'react'
 import contentEditable from './contentEditable'
 import MainBodySectionHeader from './MainBodySectionHeader'
+import WorkExperiences from './WorkExperiences'
 
 function MainContainer() {
   let EditableP = contentEditable('p')
@@ -10,7 +11,7 @@ function MainContainer() {
     
       <MainBodySectionHeader text="Work Experience"/> 
       <div className="padded-vertical">
-      <i className="fas fa-plus-circle" id="add-btn"></i>
+        <WorkExperiences />
       </div>
 
       <MainBodySectionHeader text="Education"/> 
