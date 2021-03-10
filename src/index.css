@@ -19,10 +19,85 @@ body {
     align-items: center;
 }
 
-code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+#add-btn {
+    cursor: pointer;
 }
 
-#add-btn {
+.main-body {
+    width: 533px;
+    height: 710px;
+    background-color: #f0f5f9;
+    color: #313C46;
+    box-shadow: 0 0 15px #C9D6DF;
+    margin-top: 10%;
+    display: flex;
+}
+
+.main-container {
+    padding: 1.5rem 1rem;
+}
+
+.objective {
+    font-size: 8pt;
+}
+
+.padded-vertical {
+    padding: 1rem 0;
+}
+
+.sidebar {
+    width: 35%;
+    height: 100%;
+    background-color: #52616B;
+    color: #F0F5F9;
+}
+
+.padded {
+    padding: 1.5rem 1rem;
+}
+
+.small-text {
+    font-size: 10pt;
+}
+
+.small-text .label {
+    font-weight: bold;
+}
+
+.small-text .label:not(:first-child) {
+    margin-top: 0.5rem;
+}
+
+.section-header {
+    width: 100%;
+    background-color: #313C46;
+    margin-top: 0.5rem;
+    padding: 0.15rem 1rem;
+}
+
+.main-body-section-header {
+    border-top: 1px solid #C9D6DF;
+    border-bottom: 1px solid #C9D6DF;
+    margin-top: 1rem;
+    padding: 0.25rem 0;
+}
+
+input[type="text"] {
+    width: 100%;
+}
+
+li {
+    list-style: none;
+    font-size: 9pt;
+}
+
+.skill-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+#delete-btn {
     cursor: pointer;
 }

@@ -1,8 +1,9 @@
 import React from 'react'
 import contentEditable from './contentEditable'
-import '../styles/Sidebar.css'
 import SidebarSectionHeader from './SidebarSectionHeader'
 import Skills from './Skills'
+import Languages from './Languages'
+
 
 function Sidebar() {
   let EditableH1 = contentEditable('h1')
@@ -34,7 +35,7 @@ function Sidebar() {
       
       <SidebarSectionHeader text="Languages"/>
       <div className="padded">
-        <i className="fas fa-plus-circle" id="add-btn"></i>
+        <Languages />
       </div>
 
     </aside>

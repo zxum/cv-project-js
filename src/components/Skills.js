@@ -1,14 +1,18 @@
 import React from 'react'
-import '../styles/Skills.css'
+import Skill from './Skill'
+
 
 class Skills extends React.Component {
   constructor() {
     super()
+
     this.state = { 
       skills:[],
       isAdding: false }
+
     this.setAdding = this.setAdding.bind(this)
     this.addSkill = this.addSkill.bind(this)
+    this.deleteSkill = this.deleteSkill.bind(this)
   }
 
   setAdding() {
@@ -23,6 +27,7 @@ class Skills extends React.Component {
     let {value} = event.target.firstChild
     this.setState((prevState)=>{
       let newSkills = prevState.skills.concat(value)
+
       event.target.reset()
       return {
         skills: newSkills,
@@ -31,8 +36,26 @@ class Skills extends React.Component {
     })
   }
 
+  deleteSkill(item) {
+    let newSkillsList = this.state.skills.filter(skill => {
+      return skill != item
+    })
+
+    this.setState({
+      skills: newSkillsList
+    })
+  }
+
   render() {
-    let skillList = this.state.skills.map(skill => <li>{skill}</li>)
+    let skillList = this.state.skills.map((skill)=>{
+      return <Skill skill={skill} deleteSkill={this.deleteSkill} />
+    })
+    
+    // .map(skill => {
+    //   return <Skill skill={skill} deleteSkill={this.deleteSkill} />
+    // })
+
+    console.log(skillList)
 
       if (this.state.isAdding) {
         return (
@@ -51,7 +74,7 @@ class Skills extends React.Component {
             <ul>
             {skillList}
             </ul>
-            <i className="fas fa-plus-circle" id="add-btn" onClick={this.setAdding}></i>
+            <i className="fas fa-plus-circle btn" id="add-btn" onClick={this.setAdding}></i>
           </div>
         )
       }

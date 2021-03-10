@@ -1,5 +1,4 @@
 import React from 'react'
-import '../styles/MainBodySectionHeader.css'
 
 function MainBodySectionHeader(props) {
   return (

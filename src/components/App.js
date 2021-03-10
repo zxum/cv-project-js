@@ -1,7 +1,7 @@
 import React from 'react'
 import Sidebar from './Sidebar'
 import MainContainer from './MainContainer'
-import '../styles/App.css'
+
 
 function App() {
   return (
