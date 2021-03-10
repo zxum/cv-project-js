@@ -8,9 +8,12 @@ function Skill(props) {
   return (
     <div className="skill-item">
       <EditableSpan value={props.skill} /> 
-      <i className="fas fa-times-circle btn" 
+
+      {(props.previewMode) ? <div></div> : 
+        <i className="fas fa-times-circle btn" 
          id="delete-btn"
-         onClick={()=>{props.deleteSkill(props.skill)}}></i>
+         onClick={()=>{props.deleteSkill(props.skill)}}></i>}
+      
     </div>
   )
 

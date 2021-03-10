@@ -10,9 +10,10 @@ function School(props) {
   return (
     <div className="school-info">
       <div className="flex-wrapper right-side">
+        { (props.previewMode) ? <div></div> : 
         <i className="fas fa-times-circle btn" 
           id="delete-btn"
-          onClick={()=>{props.deleteSchool(props.data.id)}}></i>
+          onClick={()=>{props.deleteSchool(props.data.id)}}></i> }
       </div>
       <div className="flex-wrapper">
         <div className="dates">

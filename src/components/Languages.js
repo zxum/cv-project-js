@@ -45,7 +45,7 @@ export class Languages extends Component {
 
   render() {
     let languagesList = this.state.languages.map(lang => {
-      return <Language lang={lang} deleteLang={this.deleteLang} />
+      return <Language lang={lang} deleteLang={this.deleteLang} previewMode={this.props.previewMode}/>
     })
     
     if (this.state.isAdding) {
@@ -65,7 +65,8 @@ export class Languages extends Component {
           <ul>
           {languagesList}
           </ul>
-          <i className="fas fa-plus-circle btn" id="add-btn" onClick={this.setAdding}></i>
+          {(this.props.previewMode) ? <div></div> : <i className="fas fa-plus-circle btn" id="add-btn" onClick={this.setAdding}></i> }
+        
         </div>
       )
     }

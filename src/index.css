@@ -21,8 +21,22 @@ body {
 
 #add-btn,
 #delete-btn,
-#done-btn {
+#done-btn,
+#preview-btn {
     cursor: pointer;
+}
+
+#preview-btn,
+#edit-btn {
+    position: absolute;
+    top: -20px;
+    left: 48%;
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    border: none;
+    background-color: #313C46;
+    color: #F0F5F9;
 }
 
 .main-body {
@@ -33,6 +47,7 @@ body {
     box-shadow: 0 0 15px #C9D6DF;
     margin-top: 10%;
     display: flex;
+    position: relative;
 }
 
 .main-container {

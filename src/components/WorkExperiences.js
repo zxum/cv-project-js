@@ -4,8 +4,8 @@ import Work from './Work'
 
 export class WorkExperiences extends Component {
 
-  constructor() {
-    super() 
+  constructor(props) {
+    super(props) 
     this.state = {
       showAddBtn: true,
       workexps: [],
@@ -33,9 +33,7 @@ export class WorkExperiences extends Component {
 
   handleCancel = (event) => {
     let form = event.target.parentNode.parentNode
-    console.log(form)
-    
-
+  
     this.toggleAddBtn()
   }
 
@@ -99,13 +97,13 @@ export class WorkExperiences extends Component {
 
   render() {
     let workList = this.state.workexps.map((work)=>{
-      return <Work key={work.id} data={work} deleteWork={this.deleteWork} />
+      return <Work key={work.id} data={work} deleteWork={this.deleteWork} previewMode={this.props.previewMode}/>
     })
     if (this.state.showAddBtn) {
       return (
         <div className="work-block">
           {workList}
-          <i className="fas fa-plus-circle" id="add-btn" onClick={this.toggleAddBtn}></i>
+          {(this.props.previewMode)? <div></div> : <i className="fas fa-plus-circle" id="add-btn" onClick={this.toggleAddBtn}></i>}
         </div>
       )
     } else {

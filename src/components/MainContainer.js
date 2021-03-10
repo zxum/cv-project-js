@@ -4,7 +4,7 @@ import MainBodySectionHeader from './MainBodySectionHeader'
 import WorkExperiences from './WorkExperiences'
 import Educations from './Educations'
 
-function MainContainer() {
+function MainContainer(props) {
   let EditableP = contentEditable('p')
   return (
     <section className="main-container">
@@ -12,12 +12,12 @@ function MainContainer() {
     
       <MainBodySectionHeader text="Work Experience"/> 
       <div className="padded-vertical">
-        <WorkExperiences />
+        <WorkExperiences  previewMode={props.previewMode}/>
       </div>
 
       <MainBodySectionHeader text="Education"/> 
       <div className="padded-vertical">
-        <Educations />
+        <Educations  previewMode={props.previewMode}/>
       </div>
     </section>
   )

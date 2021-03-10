@@ -5,7 +5,7 @@ import Skills from './Skills'
 import Languages from './Languages'
 
 
-function Sidebar() {
+function Sidebar(props) {
   let EditableH1 = contentEditable('h1')
   let EditableP = contentEditable('p')
   return (
@@ -29,13 +29,13 @@ function Sidebar() {
 
       <SidebarSectionHeader text="Skills"/>
       <div className="padded-lr">
-        <Skills /> 
+        <Skills previewMode={props.previewMode} /> 
         
       </div>
       
       <SidebarSectionHeader text="Languages"/>
       <div className="padded-lr">
-        <Languages />
+        <Languages previewMode={props.previewMode} />
       </div>
 
     </aside>

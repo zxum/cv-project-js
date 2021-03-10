@@ -1,10 +1,10 @@
 import React from 'react'
 import Skill from './Skill'
-
+import uniqid from 'uniqid'
 
 class Skills extends React.Component {
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
 
     this.state = { 
       skills:[],
@@ -48,7 +48,7 @@ class Skills extends React.Component {
 
   render() {
     let skillList = this.state.skills.map((skill)=>{
-      return <Skill skill={skill} deleteSkill={this.deleteSkill} />
+      return <Skill skill={skill} deleteSkill={this.deleteSkill} previewMode={this.props.previewMode} key={uniqid()}/>
     })
     
     // .map(skill => {
@@ -74,7 +74,8 @@ class Skills extends React.Component {
             <ul>
             {skillList}
             </ul>
-            <i className="fas fa-plus-circle btn" id="add-btn" onClick={this.setAdding}></i>
+            { (this.props.previewMode) ? <div></div> : <i className="fas fa-plus-circle btn" id="add-btn" onClick={this.setAdding}></i> }
+            
           </div>
         )
       }

@@ -9,9 +9,11 @@ function Languages(props) {
 
     <div className="skill-item">
       <EditableSpan value={props.lang} /> 
+      {(props.previewMode) ? <div></div> : 
       <i class="fas fa-times-circle btn" 
-         id="delete-btn"
-         onClick={()=>{props.deleteLang(props.lang)}}></i>
+      id="delete-btn"
+      onClick={()=>{props.deleteLang(props.lang)}}></i>
+      }
     </div>
 
   )

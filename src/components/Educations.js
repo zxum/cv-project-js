@@ -3,8 +3,8 @@ import uniqid from 'uniqid'
 import School from './School'
 
 export class Educations extends Component {
-  constructor() {
-    super() 
+  constructor(props) {
+    super(props) 
     this.state = {
       showAddBtn: true,
       schools: [],
@@ -95,14 +95,14 @@ export class Educations extends Component {
 
   render() {
     let schoolList = this.state.schools.map(school => {
-      return <School data={school} deleteSchool={this.deleteSchool} />
+      return <School data={school} deleteSchool={this.deleteSchool} previewMode={this.props.previewMode} />
     })
 
     if (this.state.showAddBtn) {
       return (
         <div className="edu-block">
           {schoolList}
-          <i className="fas fa-plus-circle" id="add-btn" onClick={this.toggleAddBtn}></i>
+          {(this.props.previewMode) ? <div></div> : <i className="fas fa-plus-circle" id="add-btn" onClick={this.toggleAddBtn}></i> }
         </div>
       )
     } else {
