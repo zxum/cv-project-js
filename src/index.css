@@ -105,11 +105,13 @@ input[type="text"] {
     margin-bottom: 0.15rem;
 }
 
-form.work-input label {
+form.work-input label,
+form.edu-input label {
     font-size: 9pt;
 }
 
-form.work-input input {
+form.work-input input,
+form.edu-input input {
     padding: 0;
     line-height: 8pt;
     font-size: 8pt;
@@ -132,7 +134,8 @@ form.work-input textarea {
     justify-content: flex-end;
 }
 
-.work-info {
+.work-info,
+.school-info {
     font-size: 10px;
 }
 
